@@ -857,6 +857,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 663DB06D12661EE900CF8CEA /* Library+YAJL.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					"../../Build/Products/three20"
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -872,6 +877,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 663DB06D12661EE900CF8CEA /* Library+YAJL.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					"../../Build/Products/three20"
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -889,6 +899,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 663DB06D12661EE900CF8CEA /* Library+YAJL.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					"../../Build/Products/three20"
+				);
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PREPROCESSOR_DEFINITIONS = EXTJSON_YAJL;

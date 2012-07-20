@@ -788,6 +788,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E6462D91187E6A900F08CB1 /* App.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					"../../Build/Products/three20"
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -800,6 +805,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E6462D91187E6A900F08CB1 /* App.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					"../../Build/Products/three20"
+				);
 				COPY_PHASE_STRIP = YES;
 				SDKROOT = iphoneos;
 			};
