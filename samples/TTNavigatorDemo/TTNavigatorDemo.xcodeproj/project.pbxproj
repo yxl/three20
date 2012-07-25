@@ -425,7 +425,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TTNavigatorDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -650,15 +650,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9922118E39B500443B46 /* App.xcconfig */;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)/../three20",
-					"$(BUILT_PRODUCTS_DIR)/../../three20",
-					"../../Build/Products/three20"
-				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					../../Build/Products/three20,
+				);
 				INFOPLIST_FILE = Info.plist;
 				SDKROOT = iphoneos;
 			};
@@ -668,12 +668,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9922118E39B500443B46 /* App.xcconfig */;
 			buildSettings = {
+				COPY_PHASE_STRIP = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)/../three20",
 					"$(BUILT_PRODUCTS_DIR)/../../three20",
-					"../../Build/Products/three20"
+					../../Build/Products/three20,
 				);
-				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
 				SDKROOT = iphoneos;
 			};
