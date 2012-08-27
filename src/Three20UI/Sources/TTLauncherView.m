@@ -609,6 +609,10 @@ static const NSInteger kDefaultColumnCount = 3;
   NSInteger row = round(origin.y/_dragButton.height);
   NSInteger itemIndex = (row * self.columnCount) + column;
   NSInteger pageIndex = floor(_scrollView.contentOffset.x/_scrollView.width);
+  if (pageIndex < 0)
+  {
+    pageIndex = 0;
+  }
 
   if (itemIndex != _positionOrigin) {
     NSMutableArray* currentButtonPage = [_buttons objectAtIndex:pageIndex];
