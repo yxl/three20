@@ -31,6 +31,7 @@
 
   NSInteger       _columnCount;
   NSInteger       _rowCount;
+  NSInteger       _maxRowCount;
 
   NSString*       _prompt;
 
@@ -65,6 +66,8 @@
 @property (nonatomic, copy) NSArray* pages;
 
 @property (nonatomic) NSInteger columnCount;
+
+@property (nonatomic) NSInteger maxRowCount;
 
 @property (nonatomic, readonly) NSInteger rowCount;
 

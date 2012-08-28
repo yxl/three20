@@ -57,6 +57,7 @@ static const NSTimeInterval kWobbleTime = 0.07;
 static const NSInteger kPromptTag = 997;
 
 static const NSInteger kDefaultColumnCount = 3;
+static const NSInteger kDefaultMaxRowCount = 3;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,6 +66,7 @@ static const NSInteger kDefaultColumnCount = 3;
 @implementation TTLauncherView
 
 @synthesize columnCount = _columnCount;
+@synthesize maxRowCount = _maxRowCount;
 @synthesize pager       = _pager;
 @synthesize prompt      = _prompt;
 @synthesize editing     = _editing;
@@ -101,10 +103,10 @@ static const NSInteger kDefaultColumnCount = 3;
 
     self.autoresizesSubviews = YES;
     self.columnCount = kDefaultColumnCount;
+    self.maxRowCount = kDefaultMaxRowCount;
     self.editable = YES;
     self.persistenceKey = @"launcherViewPages";
     self.persistenceMode = TTLauncherPersistenceModeNone;
-
   }
 
   return self;
@@ -140,9 +142,8 @@ static const NSInteger kDefaultColumnCount = 3;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)rowHeight {
-  return round(_scrollView.height / 3);
+  return round(_scrollView.height / _maxRowCount);
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (TTLauncherButton*)buttonForItem:(TTLauncherItem*)item {
