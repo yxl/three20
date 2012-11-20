@@ -963,9 +963,9 @@ static const NSInteger kDefaultMaxRowCount = 3;
   }
 
   // Add a page at the end
-  [_pages addObject:[NSMutableArray array]];
-  [_buttons addObject:[NSMutableArray array]];
-  [self updateContentSize:_pages.count];
+  // [_pages addObject:[NSMutableArray array]];
+  // [_buttons addObject:[NSMutableArray array]];
+  // [self updateContentSize:_pages.count];
 
   [self wobble];
 
