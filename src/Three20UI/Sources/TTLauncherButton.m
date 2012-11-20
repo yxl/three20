@@ -201,8 +201,8 @@ static const NSInteger kMaxBadgeNumber = 99;
     }
 
     if (_closeButton) {
-      _closeButton.origin = CGPointMake(imageRect.origin.x - (floor(_closeButton.width*0.4)),
-                                        imageRect.origin.y - (floor(_closeButton.height*0.4)));
+      _closeButton.origin = CGPointMake(imageRect.origin.x - (floor(_closeButton.width*0.2)),
+                                        imageRect.origin.y - (floor(_closeButton.height*0.2)));
     }
   }
 }
