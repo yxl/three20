@@ -294,6 +294,9 @@ static const NSInteger kDefaultMaxRowCount = 3;
   }
 
   [self updateContentSize:numberOfPages];
+
+  // Enable scrolling if there are more than 1 pages.
+  _scrollView.scrollEnabled = numberOfPages > 1;
 }
 
 
