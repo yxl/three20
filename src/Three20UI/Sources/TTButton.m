@@ -251,6 +251,23 @@ static const CGFloat kVPadding = 7.0f;
 
       [imageStyle drawPart:context];
     }
+
+    TTPartStyle* titleBackgroundStyle = [style styleForPart:@"titleBackground"];
+    if (titleBackgroundStyle) {
+      TTBoxStyle* titleBoxStyle = [titleBackgroundStyle.style firstStyleOfClass:[TTBoxStyle class]];
+      textFrame.origin.x += titleBoxStyle.margin.left;
+      textFrame.origin.y += titleBoxStyle.margin.top;
+      textFrame.size.width -= titleBoxStyle.margin.left + titleBoxStyle.margin.right;
+      textFrame.size.height -= titleBoxStyle.margin.top + titleBoxStyle.margin.bottom;
+      context.frame = textFrame;
+      [titleBackgroundStyle drawPart:context];
+
+      context.frame = self.bounds;
+      context.contentFrame = textFrame;
+      context.font = [self fontForCurrentState];
+
+      [style draw:context];
+    }
   }
 }
 
